@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./apps/musigrow-app
+        working-directory: apps/musigrow-app
     steps:
       - uses: actions/checkout@v2
         with:
