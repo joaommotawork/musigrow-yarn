@@ -20,7 +20,7 @@ module.exports = {
 		'^@types(.*)$': '<rootDir>/src/types$1',
 		'^@utils(.*)$': '<rootDir>/src/utils$1',
 	},
-	testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/', '"<rootDir>/e2e/"'],
+	testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/', '<rootDir>/e2e/'],
 	testEnvironment: 'jsdom',
 	transform: {
 		/* Use babel-jest to transpile tests with the next/babel preset
