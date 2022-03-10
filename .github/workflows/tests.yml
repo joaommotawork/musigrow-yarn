@@ -17,19 +17,15 @@ jobs:
           node-version: "14.x"
       - name: Install dependencies
         run: yarn install
-      - name: Change Directory to Musigrow App
-        run: cd apps/musigrow-app
       - name: Install Playwright Musigrow App
-        run: npx playwright install --with-deps
+        run: cd apps/musigrow-app && npx playwright install --with-deps
       - name: Run Jest Musigrow App
-        run: yarn test
+        run: cd apps/musigrow-app && yarn test
       - name: Run Playwright Tests Musigrow App
-        run: yarn test:e2e
-      - name: Change Directory to Musigrow UI
-        run: cd ../../packages/musigrow-ui
+        run: cd apps/musigrow-app && yarn test:e2e
       - name: Install Playwright Musigrow UI
-        run: npx playwright install --with-deps
+        run: cd packages/musigrow-ui &&npx playwright install --with-deps
       - name: Run Jest Musigrow UI
-        run: yarn test
+        run: cd packages/musigrow-ui && yarn test
       - name: Run Playwright Tests Musigrow UI
-        run: yarn test:e2e
+        run: cd packages/musigrow-ui && yarn test:e2e
