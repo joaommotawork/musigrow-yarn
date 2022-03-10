@@ -68,8 +68,8 @@
 		"build-storybook": "build-storybook",
 		"build-lib": "rollup -c",
 		"chromatic": "npx chromatic --project-token=b1fc947a20f2",
-		"test": "jest",
-		"test:watch": "jest --watch",
+		"test": "jest --passWithNoTests",
+		"test:watch": "jest --watch --passWithNoTests",
 		"test:e2e": "npx playwright test"
 	},
 	"lint-staged": {

@@ -7,8 +7,8 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"test": "jest",
-		"test:watch": "jest --watch",
+		"test": "jest --passWithNoTests",
+		"test:watch": "jest --watch --passWithNoTests",
 		"test:e2e": "npx playwright test"
 	},
 	"dependencies": {
