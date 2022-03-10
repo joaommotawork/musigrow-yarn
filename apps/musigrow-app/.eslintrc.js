@@ -48,9 +48,9 @@ module.exports = {
 			},
 		},
 	],
-	settings: {
+	/* settings: {
 		jest: {
 			version: require('jest/package.json').version,
 		},
-	},
+	}, */
 };

@@ -1,9 +1,40 @@
 {
-  "name": "musigrow-yarn",
-  "packageManager": "yarn@3.2.0",
-  "private": true,
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ]
+	"name": "musigrow-yarn",
+	"packageManager": "yarn@3.2.0",
+	"private": true,
+	"workspaces": [
+		"packages/*",
+		"apps/*"
+	],
+	"devDependencies": {
+		"@commitlint/cli": "^16.2.1",
+		"@commitlint/config-conventional": "^16.2.1",
+		"@infinumjs/eslint-config-react-ts": "^3.1.0",
+		"@typescript-eslint/eslint-plugin": "^5.14.0",
+		"@typescript-eslint/parser": "^5.14.0",
+		"eslint": "^8.10.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.25.4",
+		"eslint-plugin-jest": "^26.1.1",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"eslint-plugin-react": "^7.29.3",
+		"eslint-plugin-react-hooks": "^4.3.0",
+		"eslint-plugin-testing-library": "^5.0.6",
+		"husky": "^7.0.4",
+		"lint-staged": ">=10",
+		"prettier": "^2.5.1"
+	},
+	"scripts": {
+		"prepare": "husky install",
+		"postinstall": "husky install",
+		"lint": "yarn workspaces run lint",
+		"dev:ui": "yarn workspace musigrow-ui dev",
+		"dev:app": "yarn workspace musigrow-app dev",
+		"build:ui": "yarn workspace musigrow-ui build-lib",
+		"build-storybook:ui": "yarn workspace musigrow-ui build-storybook",
+		"build:app": "yarn workspace musigrow-app build",
+		"deploy:ui": "yarn workspace musigrow-ui deploy",
+		"deploy:app": "yarn workspace musigrow-app deploy"
+	}
 }
