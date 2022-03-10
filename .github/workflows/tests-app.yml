@@ -1,4 +1,4 @@
-name: Run All Tests
+name: Tests App
 on:
   push:
     branches:
