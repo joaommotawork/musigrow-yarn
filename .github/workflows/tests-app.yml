@@ -1,0 +1,28 @@
+name: Run All Tests
+on:
+  push:
+    branches:
+     - '**'
+  pull_request:
+    branches:
+     - '**'
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./apps/musigrow-app
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
+      - name: Install dependencies
+        run: yarn install
+      - name: Install Playwright Musigrow App
+        run: npx playwright install --with-deps
+      - name: Run Jest Musigrow App
+        run: yarn test
+      - name: Run Playwright Tests Musigrow App
+        run: yarn test:e2e

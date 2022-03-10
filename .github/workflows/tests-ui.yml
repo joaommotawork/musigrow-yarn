@@ -10,6 +10,9 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./apps/musigrow-ui
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -17,15 +20,9 @@ jobs:
           node-version: "14.x"
       - name: Install dependencies
         run: yarn install
-      - name: Install Playwright Musigrow App
-        run: cd apps/musigrow-app && npx playwright install --with-deps
-      - name: Run Jest Musigrow App
-        run: cd apps/musigrow-app && yarn test
-      - name: Run Playwright Tests Musigrow App
-        run: cd apps/musigrow-app && yarn test:e2e
       - name: Install Playwright Musigrow UI
-        run: cd packages/musigrow-ui &&npx playwright install --with-deps
+        run: npx playwright install --with-deps
       - name: Run Jest Musigrow UI
-        run: cd packages/musigrow-ui && yarn test
+        run: yarn test
       - name: Run Playwright Tests Musigrow UI
-        run: cd packages/musigrow-ui && yarn test:e2e
+        run: yarn test:e2e
