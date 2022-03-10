@@ -1,0 +1,5 @@
+files:
+  - source: apps/musigrow-app/src/public/locales/en/common.json
+    translation: apps/musigrow-app/src/public/locales/%two_letters_code%/%original_file_name%
+  - source: apps/musigrow-app/src/public/locales/pt/common.json
+    translation: apps/musigrow-app/src/public/locales/%two_letters_code%/%original_file_name%
