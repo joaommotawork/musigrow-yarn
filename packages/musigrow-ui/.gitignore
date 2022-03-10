@@ -2,3 +2,6 @@ lib
 build-storybook.log
 .vercel
 storybook-static
+node_modules/
+test-results/
+playwright-report/

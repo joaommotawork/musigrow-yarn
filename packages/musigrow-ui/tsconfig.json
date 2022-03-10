@@ -16,7 +16,18 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noEmit": true,
-		"jsx": "react"
+		"jsx": "react",
+		"baseUrl": ".",
+		"paths": {
+			"@atoms/*": ["src/lib/atoms/*"],
+			"@molecules/*": ["src/lib/molecules/*"],
+			"@organisms/*": ["src/lib/organisms/*"],
+			"@hooks/*": ["src/hooks/*"],
+			"@types/*": ["src/types/*"],
+			"@utils/*": ["src/utils/*"],
+			"@constants/*": ["src/constants/*"],
+			"@styles/*": ["src/styles/*"]
+		}
 	},
 	"include": ["src"],
 	"exclude": ["node_modules", "lib"]
