@@ -16,6 +16,7 @@
     "incremental": true,
     "baseUrl": ".",
 		"paths": {
+			"@tina/*": [".tina/*"],
 			"@app/*": ["src/app/*"],
 			"@features/*": ["src/features/*"],
 			"@services/*": ["src/services/*"],
@@ -29,6 +30,6 @@
 			"@styles/*": ["src/styles/*"]
 		}
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/demo/blog/[filename].js", "src/pages/demo/blog/[filename].js"],
   "exclude": ["node_modules"]
 }
