@@ -1,0 +1,21 @@
+name: Lighthouse
+
+on:
+    push:
+        branches:
+            - "**"
+    pull_request:
+        types: [opened, synchronize, reopened]
+
+jobs:
+  lighthouseci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          projectBaseDir: apps/musigrow-app
+      - run: npm install && npm install -g @lhci/cli@0.8.x
+      - run: npm run build
+      - run: lhci autorun

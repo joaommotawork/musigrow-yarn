@@ -1,5 +1,5 @@
 
-import { defineSchema, defineConfig, TinaCMS } from 'tinacms';
+import { defineSchema, defineConfig } from 'tinacms';
 
 export default defineSchema({
 	collections: [

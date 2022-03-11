@@ -89,7 +89,7 @@ const BlogPage = (props: any) => {
 					{/* Convert markdown to html in the browser only */}
 					{typeof window !== 'undefined' && (
 						<ContentSection
-							content={window.marked.parse(data.getPostsDocument.data.body) as any}></ContentSection>
+							content={(window as any).marked.parse(data.getPostsDocument.data.body)}></ContentSection>
 					)}
 				</div>
 				<div className='bg-green-100 text-center'>
@@ -108,7 +108,7 @@ const BlogPage = (props: any) => {
 };
 
 export const getStaticProps = async ({ params }: { params: any }) => {
-	const variables = { relativePath: `${params.filename}.md` };
+	const variables = { relativePath: `${params.filename}.mdx` };
 	let data: any = {};
 	try {
 		data = await staticRequest({
