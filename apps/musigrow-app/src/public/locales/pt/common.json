@@ -1,3 +1,4 @@
 {
-	"hello": "Olá"
+	"title": "Olá mundo",
+	"variable-example": "A usar uma variável {{count}}"
 }

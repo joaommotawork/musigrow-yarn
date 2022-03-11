@@ -4,6 +4,7 @@ import { Button } from 'musigrow-ui';
 import { useAppSelector, useAppDispatch } from '@app/hooks';
 import { decrement, increment } from '@features/counter/counterSlice';
 import { useGetPokemonByNameQuery } from '@services/pokemon';
+import useTranslation from 'next-translate/useTranslation';
 
 const Home: NextPage = () => {
 	// The `state` arg is correctly typed as `RootState` already
@@ -13,6 +14,8 @@ const Home: NextPage = () => {
 	const { data, error, isLoading } = useGetPokemonByNameQuery('bulbasaur');
 	// Individual hooks are also accessible under the generated endpoints:
 	// const { data, error, isLoading } = pokemonApi.endpoints.getPokemonByName.useQuery('bulbasaur')
+	const { t, lang } = useTranslation('common');
+	const example = t('variable-example', { count: 42 });
 
 	return (
 		<div>
@@ -48,6 +51,7 @@ const Home: NextPage = () => {
 						</>
 					) : null}
 				</div>
+				<div>{example}</div>
 			</main>
 
 			<footer>Footer</footer>
