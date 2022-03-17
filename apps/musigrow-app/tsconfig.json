@@ -1,20 +1,20 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "baseUrl": ".",
+	"compilerOptions": {
+		"target": "es5",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"incremental": true,
+		"baseUrl": ".",
 		"paths": {
 			"@tina/*": [".tina/*"],
 			"@app/*": ["src/app/*"],
@@ -29,7 +29,13 @@
 			"@constants/*": ["src/constants/*"],
 			"@styles/*": ["src/styles/*"]
 		}
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/demo/blog/[filename].js", "src/pages/demo/blog/[filename].js"],
-  "exclude": ["node_modules"]
+	},
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"src/pages/demo/blog/[filename].js",
+		"src/pages/demo/blog/[filename].js"
+	],
+	"exclude": ["node_modules"]
 }

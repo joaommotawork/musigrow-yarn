@@ -7,6 +7,7 @@
 		"build": "tinacms server:start -c \"next build\"",
 		"start": "tinacms server:start -c \"next start\"",
 		"lint": "next lint",
+		"format": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|scss|css|json|md)\"",
 		"test": "jest --passWithNoTests",
 		"test:watch": "jest --watch --passWithNoTests",
 		"test:e2e": "npx playwright test"
@@ -43,10 +44,11 @@
 		"recharts": "^2.1.9",
 		"styled-components": "^5.3.3",
 		"swiper": "^8.0.7",
-		"tinacms": "^0.66.8"
+		"tinacms": "^0.66.8",
+		"@axe-core/react": "^4.4.1",
+		"musigrow-ui": "0.0.0"
 	},
 	"devDependencies": {
-		"@axe-core/react": "^4.4.1",
 		"@playwright/test": "^1.19.2",
 		"@tailwindcss/forms": "^0.5.0",
 		"@tailwindcss/typography": "^0.5.2",
@@ -73,7 +75,6 @@
 		"jest": "^27.5.1",
 		"jest-axe": "^6.0.0",
 		"jest-extended": "^2.0.0",
-		"musigrow-ui": "0.0.0",
 		"postcss": "^8.4.8",
 		"prettier": "^2.5.1",
 		"prettier-plugin-tailwindcss": "^0.1.8",

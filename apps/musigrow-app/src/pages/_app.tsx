@@ -7,10 +7,10 @@ import '@vime/core/themes/default.css';
 import '@vime/core/themes/light.css';
 import '@styles/globals.css';
 import Head from 'next/head';
+import ReactDOM from 'react-dom';
+import axe from '@axe-core/react';
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
-	const ReactDOM = require('react-dom');
-	const axe = require('@axe-core/react');
 	axe(React, ReactDOM, 1000);
 }
 

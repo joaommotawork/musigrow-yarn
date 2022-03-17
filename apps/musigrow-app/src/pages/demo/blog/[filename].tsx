@@ -50,14 +50,13 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: underline;
   }
   `;
-const defaultMarked = (markdown: any) => markdown;
 
 // Use the props returned by get static props (this can be deleted when the edit provider and tina-wrapper are moved to _app.js)
-const BlogPage = (props: any) => {
+const BlogPage = ({ variables, dataProp }: any) => {
 	const { data } = useTina({
 		query,
-		variables: props.variables,
-		data: props.data,
+		variables,
+		data: dataProp,
 	});
 
 	return (

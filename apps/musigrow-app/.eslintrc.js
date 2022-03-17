@@ -10,7 +10,6 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:jest/all',
 		'plugin:testing-library/react',
-		'@infinumjs/eslint-config-core-ts',
 		'airbnb',
 		'next',
 		'next/core-web-vitals',
@@ -35,6 +34,11 @@ module.exports = {
 		'jest/no-identical-title': 'error',
 		'jest/prefer-to-have-length': 'warn',
 		'jest/valid-expect': 'error',
+		'react/jsx-filename-extension': 'off',
+		'react/jsx-props-no-spreading': 'off',
+		'react/no-invalid-html-attribute': 'off',
+		'react/function-component-definition': 'off',
+		'arrow-body-style': 'off',
 	},
 	overrides: [
 		{

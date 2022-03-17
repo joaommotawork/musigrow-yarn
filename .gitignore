@@ -11,3 +11,8 @@
 .pnp.*
 node_modules
 .eslintcache
+
+.turbo
+build/**
+dist/**
+.next/**

@@ -1,4 +1,3 @@
-
 import { defineSchema, defineConfig } from 'tinacms';
 
 export default defineSchema({
