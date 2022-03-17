@@ -21,9 +21,5 @@ jobs:
                   node-version: "14.x"
             - name: Install dependencies
               run: yarn install
-            - name: Install Playwright Musigrow UI
-              run: npx playwright install --with-deps
             - name: Run Jest Musigrow UI
               run: yarn test
-            - name: Run Playwright Tests Musigrow UI
-              run: yarn test:e2e

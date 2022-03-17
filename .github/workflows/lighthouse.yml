@@ -18,6 +18,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: yarn install && npm install -g @lhci/cli@0.8.x
-      - run: yarn build
+      - run: cd ../.. && yarn install && yarn build
+      - run: npm install -g @lhci/cli@0.8.x
+      - run: cd apps/musigrow-app
       - run: lhci autorun
