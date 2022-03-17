@@ -1,4 +1,4 @@
-name: Tests UI
+name: Tests E2E UI
 
 on:
     push:
