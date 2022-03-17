@@ -4,7 +4,7 @@
 npx lint-staged
 
 # BRANCH=$(git rev-parse --abbrev-ref HEAD)
-# REGEX="^(develop|master|release|((feature|bigfeature|task|bugfix|hotfix)\/[A-Z]+-[0-9]+_[a-z]+-.+))$"
+# REGEX="^(develop|master|release|main|((feature|bigfeature|task|bugfix|hotfix)\/[A-Z]+-[0-9]+_[a-z]+-.+))$"
 
 # if ! [[ $BRANCH =~ $REGEX ]]; then
 #     echo "Your commit was rejected due to branching name"
