@@ -1,44 +1,56 @@
 import React from 'react';
-import './button.css';
+import classNames from 'classnames';
+
+export enum IconPositions {
+	LEFT = 'small',
+	RIGHT = 'medium',
+}
+
+export enum ButtonSizes {
+	SMALL = 'small',
+	MEDIUM = 'medium',
+	LARGE = 'large',
+}
+
+export enum ButtonTypes {
+	BUTTON = 'button',
+	TEXT = 'text',
+}
 
 export interface ButtonProps {
-	/**
-	 * Is this the principal call to action on the page?
-	 */
-	primary?: boolean;
-	/**
-	 * What background color to use
-	 */
-	backgroundColor?: string;
-	/**
-	 * How large should the button be?
-	 */
-	size?: 'small' | 'medium' | 'large';
-	/**
-	 * Button contents
-	 */
-	label: string;
-	/**
-	 * Optional click handler
-	 */
+	label?: string;
+	icon?: React.ReactNode;
+	iconPosition?: IconPositions;
+	buttonType?: ButtonTypes;
+	buttonSize?: ButtonSizes;
+	classNameButton?: string;
+	classNameText?: string;
+	classNameIcon?: string;
 	onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({ primary = true, backgroundColor, size = 'medium', onClick, label }: ButtonProps) => {
-	const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Button = ({
+	label,
+	icon,
+	iconPosition,
+	buttonType,
+	buttonSize,
+	classNameButton,
+	classNameText,
+	classNameIcon,
+	onClick,
+}: ButtonProps) => {
+	const buttonClasses = classNames({
+		'text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg': true,
+	});
+
 	return (
 		<>
-			<button
-				type='button'
-				className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-				style={backgroundColor ? { backgroundColor } : {}}
-				onClick={onClick}>
-				{label}
+			<button type='button' className={buttonClasses} onClick={onClick}>
+				{icon && iconPosition === IconPositions.LEFT && icon}
+				{label && <span>{label}</span>}
+				{icon && iconPosition === IconPositions.RIGHT && icon}
 			</button>
-			<h1 className='text-3xl font-bold text-red-500 underline'>Hello world!</h1>
 		</>
 	);
 };
