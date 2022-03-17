@@ -1,3 +1,3 @@
 files:
-  - source: apps/musigrow-app/src/public/locales/**/*.json
-    translation: '%original_path%'
+  - source: apps/musigrow-app/src/public/locales/en/*.json
+    translation: apps/musigrow-app/src/public/locales/%two_letters_code%/%original_file_name%
