@@ -44,7 +44,7 @@
 		"recharts": "^2.1.9",
 		"styled-components": "^5.3.3",
 		"swiper": "^8.0.7",
-		"tinacms": "^0.66.8",
+		"tinacms": "^0.67.2",
 		"@axe-core/react": "^4.4.1",
 		"musigrow-ui": "0.0.0"
 	},
