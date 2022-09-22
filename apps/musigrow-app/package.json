@@ -20,7 +20,7 @@
 		"@popperjs/core": "^2.11.2",
 		"@react-pdf/renderer": "^2.1.1",
 		"@reduxjs/toolkit": "^1.8.0",
-		"@tinacms/cli": "^0.60.8",
+		"@tinacms/cli": "^0.61.9",
 		"@vime/core": "^5.3.1",
 		"@vime/react": "^5.3.1",
 		"classnames": "^2.3.1",
